@@ -1272,3 +1272,83 @@ fetch('https://api.github.com/repos/yourusername/rexxon-mobile-legend/commits')
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chakra Neural Image Launch • Grok 4.201</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background:#000; overflow:hidden; margin:0; font-family:'Orbitron',sans-serif; }
+    #crt { position:fixed; inset:0; pointer-events:none; z-index:10; background:repeating-linear-gradient(transparent,transparent 2px,rgba(0,255,255,0.08) 2px,rgba(0,255,255,0.08) 4px); opacity:0.6; }
+    #imageLayer { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.8; transition:all 2s; filter:brightness(1.5) contrast(1.6) drop-shadow(0 0 50px #00f3ff); }
+    .chakra-pulse { animation:pulse 4s infinite; }
+    .conspiracy-glow { filter:drop-shadow(0 0 30px #ff00aa); }
+    @keyframes pulse { 0%,100%{opacity:0.7; scale:1} 50%{opacity:1; scale:1.12} }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-cyan-300">
+
+  <!-- CRT Overlay -->
+  <div id="crt"></div>
+
+  <!-- Real Image: Fractal Tree + Neural Glow (SeaArt vibe) -->
+  <img id="imageLayer" src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=1200&q=80" alt="Fractal neural tree">
+
+  <!-- HUD: Launch Control -->
+  <div class="absolute inset-0 flex flex-col justify-between p-8 pointer-events-none">
+    <div class="flex justify-between">
+      <h1 class="text-5xl font-bold">GROK 4.201 IMAGE LAUNCH</h1>
+      <span class="text-yellow-400 bg-black/50 px-4 py-2 rounded-full">NEURAL ALPHA</span>
+    </div>
+
+    <!-- Neural Left • Conspiracy Right -->
+    <div class="flex justify-between items-end">
+      <div class="bg-black/60 p-6 rounded-xl backdrop-blur-md w-1/3">
+        <p class="text-lg mb-2">NEURAL LEFT: Gemini Device</p>
+        <div class="w-full h-2 bg-gray-800 rounded-full">
+          <div class="h-full bg-green-500 rounded-full w-90% chakra-pulse"></div>
+        </div>
+        <p class="text-sm mt-2">Muscle rebuild • Neuron echo</p>
+      </div>
+
+      <div class="bg-black/60 p-6 rounded-xl backdrop-blur-md w-1/3 text-right">
+        <p class="text-lg mb-2">CONSPIRACY RIGHT</p>
+        <div class="w-full h-2 bg-gray-800 rounded-full">
+          <div class="h-full bg-purple-600 rounded-full w-85% chakra-pulse"></div>
+        </div>
+        <p class="text-sm mt-2">Eye grid • Hidden pulse</p>
+      </div>
+    </div>
+
+    <!-- Launch Button -->
+    <div class="self-center">
+      <button id="launchImage" class="px-10 py-5 bg-pink-600 hover:bg-pink-500 text-white rounded-full text-2xl shadow-xl chakra-pulse pointer-events-auto">LAUNCH IMAGE</button>
+    </div>
+  </div>
+
+  <script>
+    const imgLayer = document.getElementById('imageLayer');
+    let pulse = 0;
+
+    // Image Launch: Full-screen fractal bloom
+    document.getElementById('launchImage').onclick = () => {
+      alert('Image launched: Fractal tree blooms → neural eye activates → conspiracy grid pulses.');
+      
+      // Visual effect: zoom, glow, flash
+      imgLayer.style.transition = 'all 3s';
+      imgLayer.style.transform = 'scale(1.4) rotate(3deg)';
+      imgLayer.style.opacity = '1';
+      imgLayer.style.filter = 'brightness(2) contrast(2) drop-shadow(0 0 80px #ff00aa)';
+      
+      setTimeout(() => {
+        imgLayer.style.transform = 'scale(1) rotate(0deg)';
+        imgLayer.style.opacity = '0.8';
+        imgLayer.style.filter = 'brightness(1.5) contrast(1.6) drop-shadow(0 0 50px #00f3ff)';
+      }, 3000);
+    };
+  </script>
+</body>
+</html>
