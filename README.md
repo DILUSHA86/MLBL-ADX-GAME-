@@ -79,7 +79,7 @@ Design something for good
            0% { transform: rotate(0deg); }
            100% { transform: rotate(360deg); }
        }
-       
+       <a href="rexxon-model.html" target="_blank" class="text-pink-600 underline">Launch Rexon Mobile Legend</a>
        /* Code block styling */
        pre {
            background: #1e293b;
@@ -791,3 +791,4 @@ Design something for good
    </script>
 </body>
 </html>
+<iframe src="rexxon-model.html" class="w-full h-96 border-2 border-cyan-500 rounded-lg"></iframe>
