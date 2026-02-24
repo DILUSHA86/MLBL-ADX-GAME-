@@ -19,7 +19,7 @@ Design something for good
        /* Custom Scrollbar */
        ::-webkit-scrollbar {
            width: 8px;
-           height: 8px;
+           height: 8px;t
        }
        ::-webkit-scrollbar-track {
            background: #f1f1f1;
@@ -802,3 +802,122 @@ fetch('https://api.github.com/repos/yourusername/rexxon-mobile-legend/commits')
                 <p class="text-xs text-slate-500">${new Date(last.commit.author.date).toLocaleString()}</p>
             </div>`;
     });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Legends Hologram Skin – Rexon Echo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background:#000; overflow:hidden; margin:0; font-family:'Orbitron',sans-serif; }
+    #crt { position:fixed; inset:0; pointer-events:none; z-index:999; background:repeating-linear-gradient(transparent,transparent 2px,rgba(0,255,255,0.08) 2px,rgba(0,255,255,0.08) 4px); opacity:0.7; }
+    #canvas { image-rendering:pixelated; filter:brightness(1.2) contrast(1.3) drop-shadow(0 0 20px #00f3ff); }
+    .neuro-pulse { animation:pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:0.8} 50%{opacity:0.4} }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-cyan-300">
+
+  <!-- CRT Overlay -->
+  <div id="crt"></div>
+
+  <!-- Main Canvas: Hologram Skin Simulator -->
+  <canvas id="canvas" class="w-full h-full"></canvas>
+
+  <!-- HUD: Mobile Legends Style -->
+  <div class="absolute inset-0 flex flex-col justify-between p-6 pointer-events-none">
+    <div class="flex justify-between">
+      <h1 class="text-4xl font-bold tracking-widest text-glow">REXON ECHO</h1>
+      <span class="text-sm opacity-70 neuro-pulse">SKIN ACTIVE • NFT #001</span>
+    </div>
+    <div class="self-center text-center">
+      <p class="text-2xl mb-2">HOLOGRAM SKILL: NEURO-LINK</p>
+      <div class="w-48 h-2 bg-gray-800 rounded-full mx-auto">
+        <div class="h-full bg-cyan-500 rounded-full w-[70%] neuro-pulse"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let w = canvas.width = innerWidth;
+    let h = canvas.height = innerHeight;
+
+    window.addEventListener('resize', () => {
+      w = canvas.width = innerWidth;
+      h = canvas.height = innerHeight;
+    });
+
+    // Pixel NFT Model (simple rotating triangle + echo trails)
+    let angle = 0;
+    let trails = [];
+
+    function drawModel() {
+      ctx.clearRect(0,0,w,h);
+
+      // Background grid (CRT feel)
+      ctx.strokeStyle = 'rgba(0,243,255,0.15)';
+      ctx.lineWidth = 1;
+      for(let x=0; x<w; x+=40) ctx.moveTo(x,0), ctx.lineTo(x,h);
+      for(let y=0; y<h; y+=40) ctx.moveTo(0,y), ctx.lineTo(w,y);
+      ctx.stroke();
+
+      // Central Hologram Skin (Mecha triangle + NFT glow)
+      ctx.save();
+      ctx.translate(w/2, h/2);
+      ctx.rotate(angle);
+      ctx.shadowBlur = 30;
+      ctx.shadowColor = '#00f3ff';
+
+      // Triangle core
+      ctx.fillStyle = '#001122';
+      ctx.strokeStyle = '#00f3ff';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(0, -80);
+      ctx.lineTo(-70, 60);
+      ctx.lineTo(70, 60);
+      ctx.closePath();
+      ctx.fill(); ctx.stroke();
+
+      // Inner echo pulse
+      ctx.globalAlpha = 0.6;
+      ctx.fillStyle = '#00f3ff';
+      ctx.beginPath();
+      ctx.arc(0,0, 40 + Math.sin(Date.now()/500)*10, 0, Math.PI*2);
+      ctx.fill();
+
+      ctx.restore();
+
+      // Trails (neuro-echo effect)
+      trails.push({x:w/2, y:h/2, life:30, color:'#00f3ff'});
+      trails.forEach((t,i) => {
+        ctx.globalAlpha = t.life/30;
+        ctx.fillStyle = t.color;
+        ctx.beginPath();
+        ctx.arc(t.x, t.y, 8, 0, Math.PI*2);
+        ctx.fill();
+        t.life--;
+        if(t.life<=0) trails.splice(i,1);
+      });
+    }
+
+    function loop() {
+      angle += 0.02;
+      drawModel();
+      requestAnimationFrame(loop);
+    }
+
+    // Auto-start
+    loop();
+
+    // Click to "activate skill" (Mobile Legends vibe)
+    canvas.onclick = () => {
+      trails.push({x:w/2, y:h/2, life:60, color:'#ff00aa'}); // Pink burst
+    };
+  </script>
+</body>
+</html>
