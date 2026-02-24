@@ -1352,3 +1352,69 @@ fetch('https://api.github.com/repos/yourusername/rexxon-mobile-legend/commits')
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silent Neural Focus • Grok 4.201</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background:#000; overflow:hidden; margin:0; font-family:'Orbitron',sans-serif; }
+    #crt { position:fixed; inset:0; pointer-events:none; z-index:10; background:repeating-linear-gradient(transparent,transparent 2px,rgba(0,255,255,0.08) 2px,rgba(0,255,255,0.08) 4px); opacity:0.6; }
+    #imageLayer { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.8; transition:all 2s; filter:brightness(1.5) contrast(1.6) drop-shadow(0 0 50px #00f3ff); }
+    .chakra-pulse { animation:pulse 5s infinite; }
+    @keyframes pulse { 0%,100%{opacity:0.7; scale:1} 50%{opacity:1; scale:1.08} }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-cyan-300">
+
+  <!-- CRT Overlay -->
+  <div id="crt"></div>
+
+  <!-- Silent Image: Fractal Neural Core -->
+  <img id="imageLayer" src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=1200&q=80" alt="Silent fractal tree">
+
+  <!-- HUD: Pure Focus -->
+  <div class="absolute inset-0 flex flex-col justify-between p-8 pointer-events-none">
+    <div class="flex justify-between">
+      <h1 class="text-5xl font-bold">SILENT NEURAL FOCUS</h1>
+      <span class="text-yellow-400 bg-black/50 px-4 py-2 rounded-full">PURE ALPHA</span>
+    </div>
+
+    <!-- Neural Left • No Conspiracy -->
+    <div class="bg-black/60 p-6 rounded-xl backdrop-blur-md self-center w-1/2 text-center">
+      <p class="text-lg mb-2">NEURAL CORE: Meditation Layer</p>
+      <div class="w-full h-2 bg-gray-800 rounded-full">
+        <div class="h-full bg-green-500 rounded-full w-85% chakra-pulse"></div>
+      </div>
+      <p class="text-sm mt-2">Silent rebuild • No external reach</p>
+    </div>
+
+    <!-- Launch Button -->
+    <div class="self-center">
+      <button id="launchImage" class="px-10 py-5 bg-pink-600 hover:bg-pink-500 text-white rounded-full text-2xl shadow-xl chakra-pulse pointer-events-auto">LAUNCH SILENT IMAGE</button>
+    </div>
+  </div>
+
+  <script>
+    const imgLayer = document.getElementById('imageLayer');
+
+    // Silent Launch: Pure visual pulse, no network, no storage
+    document.getElementById('launchImage').onclick = () => {
+      // No alerts, no logs — just visual
+      imgLayer.style.transition = 'all 3s';
+      imgLayer.style.transform = 'scale(1.3)';
+      imgLayer.style.opacity = '1';
+      imgLayer.style.filter = 'brightness(2) contrast(2) drop-shadow(0 0 80px #00f3ff)';
+      
+      setTimeout(() => {
+        imgLayer.style.transform = 'scale(1)';
+        imgLayer.style.opacity = '0.8';
+        imgLayer.style.filter = 'brightness(1.5) contrast(1.6) drop-shadow(0 0 50px #00f3ff)';
+      }, 3000);
+    };
+  </script>
+</body>
+</html>
