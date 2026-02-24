@@ -1749,3 +1749,95 @@ html <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dilusha Gihan | Technical AI Artist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Courier New', monospace; }
+    .neon { text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; }
+  </style>
+</head>
+<body class="bg-zinc-950 text-white min-h-screen">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-black/80 backdrop-blur z-50 py-4">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold neon">DILUSHA86</h1>
+      <div class="space-x-8 text-sm">
+        <a href="#about" class="hover:text-cyan-400">About</a>
+        <a href="#projects" class="hover:text-cyan-400">ADX-Protocol</a>
+        <a href="#skills" class="hover:text-cyan-400">Skills</a>
+        <a href="#contact" class="hover:text-cyan-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center text-center pt-20">
+    <div>
+      <h2 class="text-6xl md:text-7xl font-bold neon tracking-widest mb-4">TECHNICAL AI ARTIST</h2>
+      <p class="text-3xl text-cyan-400 mb-8">Merging Neural Data Visualization with Sci-Fi Aesthetics</p>
+      <p class="text-xl max-w-lg mx-auto">Building adaptive UI systems via SeaArt AI • ADX-Protocol Architect</p>
+      <a href="#projects" class="mt-12 inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-10 py-4 rounded-full text-lg transition">Explore the Protocol →</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-4xl font-bold mb-8 neon">Hi, I'm Dilusha Gihan 👋</h3>
+      <p class="text-lg leading-relaxed">I architect futuristic interfaces that blend real-time neural data with cinematic sci-fi visuals. Currently pushing the boundaries of adaptive UI through SeaArt AI and my core project ADX-Protocol.</p>
+      <p class="text-sm mt-8 text-zinc-500">Based in Colombo, Sri Lanka • Available Worldwide (Remote)</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-4xl font-bold mb-12 text-center neon">Featured Project</h3>
+      <div class="bg-zinc-900 border border-cyan-500/30 rounded-3xl p-12">
+        <h4 class="text-3xl mb-4">ADX-Protocol</h4>
+        <p class="text-xl text-cyan-300">Neural Data Visualization Engine • Sci-Fi UI Systems</p>
+        <ul class="mt-8 space-y-4 text-lg">
+          <li>✅ Real-time AI art generation pipelines</li>
+          <li>✅ Adaptive interfaces that react to neural inputs</li>
+          <li>✅ Full-stack deployment ready</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-24 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h3 class="text-4xl font-bold mb-12 neon">Core Stack</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-2xl">
+        <div>SeaArt AI</div>
+        <div>Neural Networks</div>
+        <div>Three.js / WebGL</div>
+        <div>Sci-Fi UI Kits</div>
+        <div>Python • TensorFlow</div>
+        <div>GitHub Pages • Tailwind</div>
+        <div>Real-time Data Viz</div>
+        <div>Adaptive Systems</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 text-center">
+    <div class="max-w-md mx-auto">
+      <h3 class="text-4xl font-bold neon mb-8">Let's build the future</h3>
+      <a href="https://github.com/DILUSHA86" class="block bg-white text-black py-4 rounded-full font-bold hover:scale-105 transition">GitHub →</a>
+      <p class="mt-8 text-sm text-zinc-500">X: @DILUSHAGIHAN • Open for collaborations worldwide</p>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-xs text-zinc-600">
+    © 2026 Dilusha Gihan • Colombo, Sri Lanka • Available Worldwide
+  </footer>
+</body>
+</html>
