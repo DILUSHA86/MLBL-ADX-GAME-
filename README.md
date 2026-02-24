@@ -792,3 +792,13 @@ Design something for good
 </body>
 </html>
 <iframe src="rexxon-model.html" class="w-full h-96 border-2 border-cyan-500 rounded-lg"></iframe>
+fetch('https://api.github.com/repos/yourusername/rexxon-mobile-legend/commits')
+    .then(r => r.json())
+    .then(commits => {
+        const last = commits[0];
+        document.getElementById('viewport').innerHTML += `
+            <div class="mt-8 p-4 bg-cyan-50 rounded-lg">
+                <p class="text-sm text-cyan-700">Latest update: ${last.commit.message}</p>
+                <p class="text-xs text-slate-500">${new Date(last.commit.author.date).toLocaleString()}</p>
+            </div>`;
+    });
