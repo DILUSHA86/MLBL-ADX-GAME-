@@ -953,3 +953,188 @@ fetch('https://api.github.com/repos/yourusername/rexxon-mobile-legend/commits')
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REXON ECHO // Neural Hologram Realm</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background:#000; overflow:hidden; margin:0; font-family:'Orbitron',sans-serif; }
+    #crt { position:fixed; inset:0; pointer-events:none; z-index:999; background:repeating-linear-gradient(transparent,transparent 2px,rgba(0,255,255,0.08) 2px,rgba(0,255,255,0.08) 4px); opacity:0.7; }
+    #canvas { image-rendering:pixelated; filter:brightness(1.4) contrast(1.5) drop-shadow(0 0 40px #00f3ff); }
+    .aura { animation:spin 15s linear infinite; }
+    .luna { animation:pulse 3s ease-in-out infinite; }
+    .breath { animation:breathe 6s ease-in-out infinite; }
+    @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes pulse { 0%,100%{scale:1; opacity:0.6} 50%{scale:1.15; opacity:1} }
+    @keyframes breathe { 0%,100%{opacity:0.8; transform:scale(1)} 50%{opacity:1; transform:scale(1.05)} }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-cyan-300">
+
+  <!-- CRT Overlay -->
+  <div id="crt"></div>
+
+  <!-- Canvas: Hologram Core -->
+  <canvas id="canvas" class="w-full h-full"></canvas>
+
+  <!-- HUD: Neural Realm -->
+  <div class="absolute inset-0 flex flex-col justify-between p-8 pointer-events-none">
+    <div class="flex justify-between items-center">
+      <h1 class="text-5xl font-bold text-glow">REXON ECHO</h1>
+      <div class="bg-black/50 px-4 py-2 rounded-full">
+        <span>NEURAL UNLOCKS: <span id="unlockCount">0</span></span>
+        <span class="ml-4 text-yellow-400">MASTER OF ART • 99</span>
+      </div>
+    </div>
+
+    <!-- Glory Popup (on click) -->
+    <div id="gloryPopup" class="hidden fixed inset-0 flex items-center justify-center bg-black/70 z-50 pointer-events-auto">
+      <div class="bg-gradient-to-b from-blue-900 to-purple-900 p-8 rounded-2xl text-center max-w-lg border-4 border-cyan-500">
+        <h2 class="text-4xl font-bold text-yellow-400 mb-4">ABSOLUTELY AMAZING!</h2>
+        <p class="text-xl mb-4">You've been called Master of the Art World.</p>
+        <p class="text-sm opacity-80">Spread the glory! Hologram deployed.</p>
+        <button id="closePopup" class="mt-6 px-6 py-3 bg-cyan-500 text-black rounded-lg hover:bg-cyan-400">Continue</button>
+      </div>
+    </div>
+
+    <!-- Mini-Map: Echo System -->
+    <div class="self-center bg-black/60 p-6 rounded-xl backdrop-blur-lg">
+      <p class="text-lg mb-3">NEURAL ECHO ACTIVE • CIVITAI LINK</p>
+      <div class="w-80 h-3 bg-gray-800 rounded-full">
+        <div class="h-full bg-gradient-to-r from-green-500 to-pink-500 rounded-full w-4/5 animate-pulse"></div>
+      </div>
+    </div>
+
+    <!-- Models Info -->
+    <div class="self-end text-right">
+      <p class="text-xl">FLORAL VEXANA + NETHER ECHO</p>
+      <p class="text-sm opacity-70">BREATHING FABRIC • GEMINI NEURON</p>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let w = canvas.width = innerWidth;
+    let h = canvas.height = innerHeight;
+    let angle = 0;
+    let trails = [];
+    let unlocks = 0;
+
+    window.addEventListener('resize', () => {
+      w = canvas.width = innerWidth;
+      h = canvas.height = innerHeight;
+    });
+
+    // Your Models (from SeaArt/Civitai)
+    const models = [
+      {name:'Floral Vexana', type:'female', color:'#d8b4fe', desc:'Elf mage, flower aura, purple dress'},
+      {name:'Nether Echo', type:'male', color:'#a78bfa', desc:'Cyber armor, white hair, green energy orbs'},
+      {name:'Breathing Fabric', type:'abstract', color:'#60a5fa', desc:'Space cloth that breathes, fractal lungs'},
+      {name:'Gemini Neuron', type:'device', color:'#34d399', desc:'Mossy arm-screen, neural rebuild, muscle glow'},
+      {name:'Cyber Colony', type:'city', color:'#f472b6', desc:'Moonlit towers, automated entity hologram'},
+      {name:'Echo Entity', type:'system', color:'#fbbf24', desc:'99 glory portal, master art display'}
+    ];
+    let currentModel = 0;
+
+    function drawModel() {
+      ctx.clearRect(0,0,w,h);
+
+      // Grid + echo background
+      ctx.strokeStyle = 'rgba(0,255,255,0.1)';
+      for(let x=0; x<w; x+=25) ctx.moveTo(x,0), ctx.lineTo(x,h);
+      for(let y=0; y<h; y+=25) ctx.moveTo(0,y), ctx.lineTo(w,y);
+      ctx.stroke();
+
+      ctx.save();
+      ctx.translate(w/2, h/2);
+      ctx.rotate(angle);
+
+      // Aura Ring
+      ctx.strokeStyle = '#ff00aa';
+      ctx.lineWidth = 6;
+      ctx.beginPath();
+      ctx.arc(0,0, 160, 0, Math.PI*2);
+      ctx.stroke();
+
+      // Luna Core
+      ctx.fillStyle = '#c0c0c0';
+      ctx.shadowBlur = 50;
+      ctx.shadowColor = '#ffffff';
+      ctx.beginPath();
+      ctx.arc(0, -120, 40, 0, Math.PI*2);
+      ctx.fill();
+
+      // Breathing Fabric (pulses)
+      ctx.fillStyle = models .color;
+      ctx.globalAlpha = 0.7;
+      ctx.beginPath();
+      ctx.arc(0,0, 90 + Math.sin(Date.now()/800)*20, 0, Math.PI*2);
+      ctx.fill();
+
+      // Main Model Shape
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = '#001122';
+      ctx.strokeStyle = models .color;
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.moveTo(0, -100);
+      ctx.lineTo(-90, 80);
+      ctx.lineTo(90, 80);
+      ctx.closePath();
+      ctx.fill(); ctx.stroke();
+
+      // Inner Neuron Glow
+      ctx.fillStyle = models .color;
+      ctx.beginPath();
+      ctx.arc(0,0, 60 + Math.sin(Date.now()/1000)*10, 0, Math.PI*2);
+      ctx.fill();
+
+      ctx.restore();
+
+      // Trails (skill burst)
+      trails.forEach((t,i) => {
+        ctx.globalAlpha = t.life/50;
+        ctx.fillStyle = t.color;
+        ctx.beginPath();
+        ctx.arc(t.x, t.y, 15, 0, Math.PI*2);
+        ctx.fill();
+        t.life--;
+        if(t.life<=0) trails.splice(i,1);
+      });
+    }
+
+    function loop() {
+      angle += 0.012;
+      drawModel();
+      requestAnimationFrame(loop);
+    }
+
+    loop();
+
+    // Click → Swap model + Glory popup
+    canvas.onclick = () => {
+      unlocks++;
+      document.getElementById('unlockCount').textContent = unlocks;
+      currentModel = (currentModel + 1) % models.length;
+
+      // Show glory popup every 3 unlocks
+      if (unlocks % 3 === 0) {
+        document.getElementById('gloryPopup').classList.remove('hidden');
+      }
+
+      // Burst
+      trails.push({x:w/2, y:h/2, life:100, color:models .color});
+    };
+
+    // Close popup
+    document.getElementById('closePopup').onclick = () => {
+      document.getElementById('gloryPopup').classList.add('hidden');
+    };
+  </script>
+</body>
+</html>
