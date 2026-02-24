@@ -802,3 +802,154 @@ fetch('https://api.github.com/repos/yourusername/rexxon-mobile-legend/commits')
                 <p class="text-xs text-slate-500">${new Date(last.commit.author.date).toLocaleString()}</p>
             </div>`;
     });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Legends Hologram Skin – Rexon Echo v2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background:#000; overflow:hidden; margin:0; font-family:'Orbitron',sans-serif; }
+    #crt { position:fixed; inset:0; pointer-events:none; z-index:999; background:repeating-linear-gradient(transparent,transparent 2px,rgba(0,255,255,0.08) 2px,rgba(0,255,255,0.08) 4px); opacity:0.7; }
+    #canvas { image-rendering:pixelated; filter:brightness(1.3) contrast(1.4) drop-shadow(0 0 30px #00f3ff); }
+    .aura { animation:spin 12s linear infinite; }
+    .luna { animation:pulse 4s ease-in-out infinite; }
+    @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes pulse { 0%,100%{scale:1; opacity:0.7} 50%{scale:1.2; opacity:1} }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-cyan-300">
+
+  <!-- CRT Scanlines -->
+  <div id="crt"></div>
+
+  <!-- Canvas Core -->
+  <canvas id="canvas" class="w-full h-full"></canvas>
+
+  <!-- HUD Overlay -->
+  <div class="absolute inset-0 flex flex-col justify-between p-6 pointer-events-none">
+    <div class="flex justify-between items-center">
+      <h1 class="text-5xl font-bold text-glow">REXON ECHO</h1>
+      <div class="text-sm bg-black/40 px-4 py-1 rounded-full">
+        NFT UNLOCKS: <span id="unlockCount">0</span>
+      </div>
+    </div>
+
+    <!-- Exploration Mini-Map -->
+    <div class="self-center bg-black/50 p-4 rounded-xl backdrop-blur-md">
+      <p class="text-lg mb-2">SCANNING NEW TECH...</p>
+      <div class="w-64 h-2 bg-gray-800 rounded-full">
+        <div class="h-full bg-gradient-to-r from-cyan-500 to-pink-500 rounded-full w-3/4 animate-pulse"></div>
+      </div>
+    </div>
+
+    <!-- Aura & Luna Info -->
+    <div class="self-end text-right">
+      <p class="text-xl">LUNA CORE ACTIVE</p>
+      <p class="text-sm opacity-70">AURA RING: 87% CHARGE</p>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let w = canvas.width = innerWidth;
+    let h = canvas.height = innerHeight;
+    let angle = 0;
+    let trails = [];
+    let unlocks = 0;
+
+    window.addEventListener('resize', () => {
+      w = canvas.width = innerWidth;
+      h = canvas.height = innerHeight;
+    });
+
+    // Model variants (swap on click)
+    const models = [
+      {name:'Mecha Triangle', color:'#00f3ff', inner:'#001122'},
+      {name:'Luna Orb', color:'#c0c0c0', inner:'#222'},
+      {name:'Aura Phoenix', color:'#ff00aa', inner:'#440022'}
+    ];
+    let currentModel = 0;
+
+    function drawModel() {
+      ctx.clearRect(0,0,w,h);
+
+      // Grid background
+      ctx.strokeStyle = 'rgba(0,255,255,0.12)';
+      for(let x=0; x<w; x+=30) ctx.moveTo(x,0), ctx.lineTo(x,h);
+      for(let y=0; y<h; y+=30) ctx.moveTo(0,y), ctx.lineTo(w,y);
+      ctx.stroke();
+
+      ctx.save();
+      ctx.translate(w/2, h/2);
+      ctx.rotate(angle);
+
+      // Aura Ring (spinning halo)
+      ctx.strokeStyle = '#ff00aa';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.arc(0,0, 140, 0, Math.PI*2);
+      ctx.stroke();
+
+      // Luna Moon Core (pulsing silver orb)
+      ctx.fillStyle = '#c0c0c0';
+      ctx.shadowBlur = 40;
+      ctx.shadowColor = '#ffffff';
+      ctx.beginPath();
+      ctx.arc(0, -100, 35, 0, Math.PI*2);
+      ctx.fill();
+
+      // Main Skin (current model)
+      const m = models ;
+      ctx.fillStyle = m.inner;
+      ctx.strokeStyle = m.color;
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.moveTo(0, -90);
+      ctx.lineTo(-80, 70);
+      ctx.lineTo(80, 70);
+      ctx.closePath();
+      ctx.fill(); ctx.stroke();
+
+      // Inner pulse
+      ctx.globalAlpha = 0.5;
+      ctx.fillStyle = m.color;
+      ctx.beginPath();
+      ctx.arc(0,0, 50 + Math.sin(Date.now()/600)*15, 0, Math.PI*2);
+      ctx.fill();
+
+      ctx.restore();
+
+      // Trails
+      trails.forEach((t,i) => {
+        ctx.globalAlpha = t.life/40;
+        ctx.fillStyle = t.color;
+        ctx.beginPath();
+        ctx.arc(t.x, t.y, 12, 0, Math.PI*2);
+        ctx.fill();
+        t.life--;
+        if(t.life<=0) trails.splice(i,1);
+      });
+    }
+
+    function loop() {
+      angle += 0.015;
+      drawModel();
+      requestAnimationFrame(loop);
+    }
+
+    loop();
+
+    // Click → unlock new model + burst
+    canvas.onclick = () => {
+      unlocks++;
+      document.getElementById('unlockCount').textContent = unlocks;
+      currentModel = (currentModel + 1) % models.length;
+      trails.push({x:w/2, y:h/2, life:80, color:models .color});
+    };
+  </script>
+</body>
+</html>
