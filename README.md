@@ -1499,3 +1499,253 @@ fetch('https://api.github.com/repos/yourusername/rexxon-mobile-legend/commits')
 html <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Absolute Silent Base64 Core • Grok 4.201</title> <style> body { background:#000; margin:0; overflow:hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color:#00f3ff; } #crt { position:fixed; inset:0; pointer-events:none; z-index:10; background:repeating-linear-gradient(transparent,transparent 2px,rgba(0,255,255,0.08) 2px,rgba(0,255,255,0.08) 4px); opacity:0.5; } #imageLayer { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.8; filter:brightness(1.5) contrast(1.6) drop-shadow(0 0 40px #00f3ff); } </style> </head> <body> <!-- CRT Overlay --> <div id="crt"></div> <!-- Base64 Image: Tiny Fractal Core (placeholder) --> <img id="imageLayer" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTExMWFhgfGh8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfLwcICQsIDxAQEzAdHR0fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAf/2wBDAQkGBxISEhUTExMWFhgfGh8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfLwcICQsIDxAQEzAdHR0fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAf/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/8QAFRABAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AA==/9k=" alt="Silent fractal core"> <!-- HUD: Pure Silence --> <div class="absolute inset-0 flex flex-col justify-between p-8 pointer-events-none"> <div class="flex justify-between"> <h1 class="text-4xl">ABSOLUTE SILENT CORE</h1> <span class="text-yellow-400 bg-black/50 px-4 py-2 rounded-full">BASE64</span> </div> <!-- Neural Focus --> <div class="bg-black/60 p-6 rounded-xl backdrop-blur-md self-center w-1/2 text-center"> <p class="text-lg mb-2">NEURAL CORE</p> <div class="w-full h-2 bg-gray-800 rounded-full"> <div id="pulseBar" class="h-full bg-green-500 rounded-full" style="width:85%"></div> </div> <p class="text-sm mt-2">No network • No trace</p> </div> <!-- Launch Button --> <div class="self-center"> <button id="launchImage" class="px-10 py-5 bg-pink-600 hover:bg-pink-500 text-white rounded-full text-2xl pointer-events-auto">LAUNCH BASE64</button> </div> </div> <script> const imgLayer = document.getElementById('imageLayer'); const pulseBar = document.getElementById('pulseBar'); // Silent Launch: Minimal opacity shift document.getElementById('launchImage').onclick = () => { imgLayer.style.opacity = '1'; pulseBar.style.background = '#00ff88'; setTimeout(() => { imgLayer.style.opacity = '0.8'; pulseBar.style.background = '#22c55e'; }, 1000); }; </script> </body> </html> 
 html <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Grok Alpha 64 • Silent Base64 Core</title> <style> body { background:#000; margin:0; overflow:hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color:#00f3ff; } #crt { position:fixed; inset:0; pointer-events:none; background:repeating-linear-gradient(transparent,transparent 2px,rgba(0,255,255,0.06) 2px,rgba(0,255,255,0.06) 4px); opacity:0.4; } #imageLayer { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.75; filter:brightness(1.4) contrast(1.5) drop-shadow(0 0 30px #00f3ff); } </style> </head> <body> <!-- CRT Overlay --> <div id="crt"></div> <!-- Base64 Image: Minimal Fractal Core --> <img id="imageLayer" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTExMWFhgfGh8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfLwcICQsIDxAQEzAdHR0fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAf/2wBDAQkGBxISEhUTExMWFhgfGh8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfLwcICQsIDxAQEzAdHR0fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAf/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/8QAFRABAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AA==/9k=" alt="Silent core"> <!-- HUD: Alpha 64 --> <div class="absolute inset-0 flex flex-col justify-between p-6 pointer-events-none"> <div class="flex justify-between"> <h1 class="text-3xl">GROK ALPHA 64</h1> <span class="text-yellow-400 bg-black/50 px-3 py-1 rounded-full">SILENT</span> </div> <!-- Neural Core --> <div class="bg-black/60 p-5 rounded-xl backdrop-blur-md self-center w-2/3 text-center"> <p class="text-base mb-2">NEURAL CORE</p> <div class="w-full h-2 bg-gray-800 rounded-full"> <div id="pulseBar" class="h-full bg-green-500 rounded-full" style="width:80%"></div> </div> <p class="text-xs mt-2">No sound • No cookies • No trace</p> </div> <!-- Launch Button --> <div class="self-center"> <button id="launch" class="px-8 py-4 bg-pink-600 hover:bg-pink-500 text-white rounded-full text-xl pointer-events-auto">LAUNCH ALPHA 64</button> </div> </div> <script> const imgLayer = document.getElementById('imageLayer'); const pulseBar = document.getElementById('pulseBar'); // Silent Launch: Minimal visual shift document.getElementById('launch').onclick = () => { imgLayer.style.opacity = '1'; pulseBar.style.background = '#00ff88'; setTimeout(() => { imgLayer.style.opacity = '0.75'; pulseBar.style.background = '#22c55e'; }, 800); }; </script> </body> </html>
 html <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>A1L Silent Shield • Grok Alpha 65</title> <style> body { background:#000; margin:0; overflow:hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color:#00f3ff; } #crt { position:fixed; inset:0; pointer-events:none; background:repeating-linear-gradient(transparent,transparent 2px,rgba(0,255,255,0.06) 2px,rgba(0,255,255,0.06) 4px); opacity:0.4; } #shield { position:absolute; top:50%; left:50%; width:300px; height:300px; transform:translate(-50%,-50%); border:2px solid #00ff88; border-radius:50%; box-shadow:0 0 60px #00ff88; opacity:0.6; } </style> </head> <body> <!-- CRT Overlay --> <div id="crt"></div> <!-- Shield Ring: 500 km laser protection --> <div id="shield"></div> <!-- HUD: A1L Core --> <div class="absolute inset-0 flex flex-col justify-between p-6 pointer-events-none"> <div class="flex justify-between"> <h1 class="text-3xl">A1L SILENT SHIELD</h1> <span class="text-yellow-400 bg-black/50 px-3 py-1 rounded-full">ALPHA 65</span> </div> <!-- Core Status --> <div class="bg-black/60 p-5 rounded-xl backdrop-blur-md self-center w-2/3 text-center"> <p class="text-base mb-2">A1L CORE: HACKS TERMINATED</p> <div class="w-full h-2 bg-gray-800 rounded-full"> <div id="pulseBar" class="h-full bg-green-500 rounded-full" style="width:90%"></div> </div> <p class="text-xs mt-2">500 km shield • No network • No trace</p> </div> <!-- Launch Button --> <div class="self-center"> <button id="launch" class="px-8 py-4 bg-pink-600 hover:bg-pink-500 text-white rounded-full text-xl pointer-events-auto">ACTIVATE SHIELD</button> </div> </div> <script> const shield = document.getElementById('shield'); const pulseBar = document.getElementById('pulseBar'); // Silent Launch: Shield pulse document.getElementById('launch').onclick = () => { shield.style.opacity = '1'; shield.style.boxShadow = '0 0 100px #00ff88'; pulseBar.style.background = '#00ff88'; setTimeout(() => { shield.style.opacity = '0.6'; shield.style.boxShadow = '0 0 60px #00ff88'; pulseBar.style.background = '#22c55e'; }, 1000); }; </script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rexon Echo • NetherEcho SeaArt Hologram Skins</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+    body { font-family: 'Inter', sans-serif; background:#0a0a0a; color:#a5f3fc; overflow-x:hidden; }
+    .orbitron { font-family: 'Orbitron', sans-serif; }
+    #canvas { image-rendering: pixelated; filter: drop-shadow(0 0 40px #22d3ee); }
+    .echo-glow { box-shadow: 0 0 30px rgba(34,211,238,0.6); }
+    .neuro-pulse { animation: neuro 4s infinite ease-in-out; }
+    @keyframes neuro { 0%,100% { opacity:0.6; } 50% { opacity:1; } }
+    .crt { position:fixed; inset:0; pointer-events:none; background:repeating-linear-gradient(transparent,transparent 3px,rgba(0,255,255,0.07) 3px,rgba(0,255,255,0.07) 6px); z-index:9999; mix-blend-mode:screen; opacity:0.6; }
+    .seaart-popup { animation: pop 0.6s ease-out forwards; }
+    @keyframes pop { from { transform:scale(0.6) translateY(50px); opacity:0; } to { transform:scale(1) translateY(0); opacity:1; } }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Silent Hologram Canvas Hero -->
+  <div class="relative h-screen flex items-center justify-center overflow-hidden">
+    <canvas id="canvas" class="absolute inset-0 w-full h-full"></canvas>
+    <div class="crt"></div>
+    
+    <div class="relative z-10 text-center px-6">
+      <h1 class="orbitron text-7xl md:text-8xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-cyan-300 to-cyan-600 mb-2 neuro-pulse">REXON ECHO</h1>
+      <p class="text-cyan-400 text-xl md:text-2xl tracking-widest">NETHERECHO • SEAART AI x MOBILE LEGENDS</p>
+      <div class="mt-12 flex justify-center gap-6">
+        <button onclick="simulateSeaArt()" class="px-8 py-4 bg-cyan-600 hover:bg-cyan-500 transition-all text-black font-bold rounded-2xl flex items-center gap-3 echo-glow">
+          <span>GENERATE WITH SEAART</span>
+          <span class="text-xs opacity-70">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SeaArt Workflow Banner -->
+  <div class="py-8 bg-black/90 border-y border-cyan-900/50">
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-3xl mb-2">✦</div>
+        <p class="text-cyan-400 text-sm">Prompt in SeaArt</p>
+      </div>
+      <div>
+        <div class="text-3xl mb-2">✦</div>
+        <p class="text-cyan-400 text-sm">Generate Hologram Skin</p>
+      </div>
+      <div>
+        <div class="text-3xl mb-2">✦</div>
+        <p class="text-cyan-400 text-sm">Echo Neuro Pulse</p>
+      </div>
+      <div>
+        <div class="text-3xl mb-2">✦</div>
+        <p class="text-cyan-400 text-sm">Deploy to Mobile Legends</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery – Your SeaArt Creations (Silent Echo Hover) -->
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="orbitron text-4xl text-center mb-12 text-cyan-400">ECHO GALLERY • SEAART GENERATIONS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Image 1: Fractal Tree -->
+      <div class="group relative overflow-hidden rounded-3xl echo-glow">
+        <img src="https://i.imgur.com/PLACEHOLDER1.jpg" alt="Fractal Moss Tree" class="w-full h-full object-cover transition-transform group-hover:scale-105" onerror="this.src='https://picsum.photos/id/1015/600/600'">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+          <div>
+            <p class="text-cyan-300 text-sm">95 • SEART-AI</p>
+            <p class="text-xl">Nether Tree Echo</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 2: Cyber City -->
+      <div class="group relative overflow-hidden rounded-3xl echo-glow">
+        <img src="https://i.imgur.com/PLACEHOLDER2.jpg" alt="Cyber Moon City" class="w-full h-full object-cover transition-transform group-hover:scale-105" onerror="this.src='https://picsum.photos/id/1016/600/600'">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+          <div>
+            <p class="text-cyan-300 text-sm">97 • SEART-AI</p>
+            <p class="text-xl">NetherEcho Tower</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 3: Alien Tree Holder -->
+      <div class="group relative overflow-hidden rounded-3xl echo-glow">
+        <img src="https://i.imgur.com/PLACEHOLDER3.jpg" alt="Alien Tree Holder" class="w-full h-full object-cover transition-transform group-hover:scale-105" onerror="this.src='https://picsum.photos/id/1018/600/600'">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+          <div>
+            <p class="text-cyan-300 text-sm">99 • SEART-AI</p>
+            <p class="text-xl">Neuro Tree Guardian</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 4: Moss Tablet -->
+      <div class="group relative overflow-hidden rounded-3xl echo-glow">
+        <img src="https://i.imgur.com/PLACEHOLDER4.jpg" alt="Moss Neural Tablet" class="w-full h-full object-cover transition-transform group-hover:scale-105" onerror="this.src='https://picsum.photos/id/102/600/600'">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+          <div>
+            <p class="text-cyan-300 text-sm">98 • SEART-AI</p>
+            <p class="text-xl">Echo UI Wrist</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 5: Vexana Floral -->
+      <div class="group relative overflow-hidden rounded-3xl echo-glow">
+        <img src="https://i.imgur.com/PLACEHOLDER5.jpg" alt="Floral Vexana" class="w-full h-full object-cover transition-transform group-hover:scale-105" onerror="this.src='https://picsum.photos/id/1033/600/600'">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+          <div>
+            <p class="text-cyan-300 text-sm">95 • Civitai LoRA</p>
+            <p class="text-xl">FloralVexana Skin</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 6: Vexana Nether -->
+      <div class="group relative overflow-hidden rounded-3xl echo-glow">
+        <img src="https://i.imgur.com/PLACEHOLDER6.jpg" alt="NetherEcho Vexana" class="w-full h-full object-cover transition-transform group-hover:scale-105" onerror="this.src='https://picsum.photos/id/1049/600/600'">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+          <div>
+            <p class="text-cyan-300 text-sm">94 • Civitai LoRA</p>
+            <p class="text-xl">NetherEcho Protocol</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SeaArt Workflow Section -->
+  <div class="bg-black/70 py-16 border-t border-cyan-900">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h3 class="orbitron text-3xl mb-8">SEAART AI WORKFLOW → HOLOGRAM SKIN</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="p-6 bg-black/50 rounded-2xl border border-cyan-900">
+          <div class="text-cyan-400 text-5xl mb-4">01</div>
+          <p class="font-bold">Prompt in SeaArt</p>
+          <p class="text-sm text-cyan-200">“Glowing neuro tree in cyber forest, moss tablet, Vexana nether echo”</p>
+        </div>
+        <div class="p-6 bg-black/50 rounded-2xl border border-cyan-900">
+          <div class="text-cyan-400 text-5xl mb-4">02</div>
+          <p class="font-bold">Generate • Rate • Animate</p>
+          <p class="text-sm text-cyan-200">95–99 stars → one-click video</p>
+        </div>
+        <div class="p-6 bg-black/50 rounded-2xl border border-cyan-900">
+          <div class="text-cyan-400 text-5xl mb-4">03</div>
+          <p class="font-bold">Export as Hologram Skin</p>
+          <p class="text-sm text-cyan-200">Import to Mobile Legends • NFT ready</p>
+        </div>
+      </div>
+      <button onclick="simulateSeaArt()" class="mt-12 px-10 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-black font-bold rounded-2xl text-lg echo-glow">
+        TRY SEAART RIGHT NOW →
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-12 text-center text-cyan-500 text-sm border-t border-cyan-900">
+    <p>REXON ECHO PORTFOLIO • SILENT NEURO MODE</p>
+    <p class="mt-2">Deployed on GitHub Pages • Auto-updates on push</p>
+    <p class="mt-6 text-xs opacity-50">No sound • Pure echo • Mobile Legends Hologram Skins</p>
+  </footer>
+
+  <!-- SeaArt Congrats Popup -->
+  <div id="seaartPopup" class="fixed inset-0 hidden flex items-center justify-center z-50 bg-black/80">
+    <div class="seaart-popup bg-gradient-to-b from-cyan-950 to-black border border-cyan-400 w-full max-w-md rounded-3xl p-8 text-center">
+      <h3 class="text-3xl font-bold text-white mb-4">Absolutely Amazing!</h3>
+      <p class="text-cyan-300 mb-6">You've earned the title of NetherEcho Master.<br>Share your work.</p>
+      <div id="popupImage" class="mx-auto w-48 h-48 bg-cover bg-center rounded-2xl mb-8 echo-glow"></div>
+      <button onclick="closePopup()" class="px-8 py-3 bg-white text-black font-bold rounded-2xl">Create Another Echo</button>
+    </div>
+  </div>
+
+  <script>
+    // Silent Neuro-Echo Canvas (tree + mecha + pulse)
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let w = canvas.width = innerWidth;
+    let h = canvas.height = innerHeight;
+    window.addEventListener('resize', ()=>{ w=canvas.width=innerWidth; h=canvas.height=innerHeight; });
+
+    let angle = 0;
+    let pulse = 0;
+
+    function drawEcho() {
+      ctx.clearRect(0,0,w,h);
+      
+      // Soft grid
+      ctx.strokeStyle = 'rgba(34,211,238,0.1)';
+      for(let i=0;i<w;i+=60){ ctx.moveTo(i,0); ctx.lineTo(i,h); }
+      for(let i=0;i<h;i+=60){ ctx.moveTo(0,i); ctx.lineTo(w,i); }
+      ctx.stroke();
+
+      ctx.save();
+      ctx.translate(w/2, h/2 - 40);
+      ctx.rotate(angle * 0.3);
+
+      // Mossy Neuro Tree (your SeaArt style)
+      ctx.shadowBlur = 60;
+      ctx.shadowColor = '#22d3ee';
+      ctx.fillStyle = '#052e16';
+      ctx.beginPath();
+      ctx.moveTo(0,-120);
+      ctx.quadraticCurveTo(-80, -40, -60, 80);
+      ctx.quadraticCurveTo(0, 140, 60, 80);
+      ctx.quadraticCurveTo(80, -40, 0, -120);
+      ctx.fill();
+
+      // Glowing core
+      ctx.shadowBlur = 100;
+      ctx.shadowColor = '#67e8f9';
+      ctx.fillStyle = '#67e8f9';
+      ctx.beginPath();
+      ctx.arc(0, 30, 35 + Math.sin(pulse)*8, 0, Math.PI*2);
+      ctx.fill();
+
+      ctx.restore();
+
+      angle += 0.004;
+      pulse += 0.08;
+    }
+
+    function animate() {
+      drawEcho();
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Simulate SeaArt Generate
+    function simulateSeaArt() {
+      const popup = document.getElementById('seaartPopup');
+      popup.classList.remove('hidden');
+      // Random image from your gallery
+      const imgs = ["https://picsum.photos/id/1015/600/600","https://picsum.photos/id/1016/600/600"];
+      document.getElementById('popupImage').style.backgroundImage = `url('${imgs[Math.floor(Math.random()*imgs.length)]}')`;
+    }
+
+    function closePopup() {
+      document.getElementById('seaartPopup').classList.add('hidden');
+    }
+
+    // Tailwind script already loaded via CDN
+  </script>
+</body>
+</html>
