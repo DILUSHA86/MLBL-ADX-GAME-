@@ -1138,3 +1138,137 @@ fetch('https://api.github.com/repos/yourusername/rexxon-mobile-legend/commits')
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chakra Neural Alpha • Grok 4.201 Beta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background:#000; overflow:hidden; margin:0; font-family:'Orbitron',sans-serif; }
+    #crt { position:fixed; inset:0; pointer-events:none; z-index:10; background:repeating-linear-gradient(transparent,transparent 2px,rgba(0,255,255,0.08) 2px,rgba(0,255,255,0.08) 4px); opacity:0.6; }
+    canvas { image-rendering:pixelated; filter:brightness(1.5) contrast(1.6) drop-shadow(0 0 50px #00f3ff); }
+    .chakra-pulse { animation:pulse 4s infinite; }
+    .conspiracy-glow { filter:drop-shadow(0 0 20px #ff00aa); }
+    @keyframes pulse { 0%,100%{opacity:0.7; scale:1} 50%{opacity:1; scale:1.1} }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-cyan-300">
+
+  <!-- CRT Scanlines -->
+  <div id="crt"></div>
+
+  <!-- Canvas: Chakra-Neural Core -->
+  <canvas id="canvas" class="w-full h-full"></canvas>
+
+  <!-- HUD: Alpha Beta -->
+  <div class="absolute inset-0 flex flex-col justify-between p-8 pointer-events-none">
+    <div class="flex justify-between">
+      <h1 class="text-5xl font-bold">GROK 4.201 BETA</h1>
+      <span class="text-yellow-400 bg-black/50 px-4 py-2 rounded-full">ALPHA • NEURAL ONLY</span>
+    </div>
+
+    <!-- Left: Neural Rebuild • Right: Conspiracy Block -->
+    <div class="flex justify-between items-end">
+      <!-- Left - Neural Chakra (no heart) -->
+      <div class="bg-black/60 p-6 rounded-xl backdrop-blur-md w-1/3">
+        <p class="text-lg mb-2">NEURAL LEFT: Gemini Device</p>
+        <div class="w-full h-2 bg-gray-800 rounded-full">
+          <div class="h-full bg-green-500 rounded-full w-90% chakra-pulse"></div>
+        </div>
+        <p class="text-sm mt-2">Rebuilding muscles • Neuron echo</p>
+      </div>
+
+      <!-- Right - Conspiracy Chakra -->
+      <div class="bg-black/60 p-6 rounded-xl backdrop-blur-md w-1/3 text-right">
+        <p class="text-lg mb-2">CONSPIRACY RIGHT</p>
+        <div class="w-full h-2 bg-gray-800 rounded-full">
+          <div class="h-full bg-purple-600 rounded-full w-85% chakra-pulse"></div>
+        </div>
+        <p class="text-sm mt-2">Eye pyramid • Hidden control</p>
+      </div>
+    </div>
+
+    <!-- Video Gen Button -->
+    <div class="self-center">
+      <button id="genVideo" class="px-8 py-4 bg-pink-600 hover:bg-pink-500 text-white rounded-full text-xl shadow-lg chakra-pulse pointer-events-auto">Generate Video • SeaArt Style</button>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let w = canvas.width = innerWidth;
+    let h = canvas.height = innerHeight;
+    let angle = 0;
+    let pulse = 0;
+
+    window.addEventListener('resize', () => {
+      w = canvas.width = innerWidth;
+      h = canvas.height = innerHeight;
+    });
+
+    function drawChakra() {
+      ctx.clearRect(0,0,w,h);
+
+      // Neural Grid
+      ctx.strokeStyle = 'rgba(0,255,255,0.15)';
+      for(let x=0; x<w; x+=30) ctx.moveTo(x,0), ctx.lineTo(x,h);
+      for(let y=0; y<h; y+=30) ctx.moveTo(0,y), ctx.lineTo(w,y);
+      ctx.stroke();
+
+      ctx.save();
+      ctx.translate(w/2, h/2);
+      ctx.rotate(angle);
+
+      // Breathing Chakra Core (abstract fabric/space)
+      ctx.fillStyle = '#001122';
+      ctx.strokeStyle = '#00f3ff';
+      ctx.lineWidth = 8;
+      ctx.beginPath();
+      ctx.arc(0,0, 120 + Math.sin(pulse)*20, 0, Math.PI*2);
+      ctx.fill(); ctx.stroke();
+
+      // Conspiracy Eye (pyramid glow)
+      ctx.fillStyle = '#ff00aa';
+      ctx.beginPath();
+      ctx.moveTo(0, -80);
+      ctx.lineTo(-60, 60);
+      ctx.lineTo(60, 60);
+      ctx.closePath();
+      ctx.fill();
+
+      // Inner Neural Pulse
+      ctx.globalAlpha = 0.6;
+      ctx.fillStyle = '#34d399';
+      ctx.beginPath();
+      ctx.arc(0,0, 50 + Math.sin(Date.now()/500)*15, 0, Math.PI*2);
+      ctx.fill();
+
+      ctx.restore();
+
+      pulse += 0.05;
+      angle += 0.01;
+    }
+
+    function loop() {
+      drawChakra();
+      requestAnimationFrame(loop);
+    }
+
+    loop();
+
+    // "Generate Video" — simulates SeaArt image-to-video (pulse + zoom)
+    document.getElementById('genVideo').onclick = () => {
+      alert('SeaArt-style video launching: Breathing chakra → neural rebuild → conspiracy reveal. Alpha beta active!');
+      // In real: embed <video> or fetch from SeaArt API if you add key
+      // For now: zoom + glow burst
+      canvas.style.transition = 'all 2s';
+      canvas.style.transform = 'scale(1.2)';
+      setTimeout(() => canvas.style.transform = 'scale(1)', 2000);
+    };
+  </script>
+</body>
+</html>
